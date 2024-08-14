@@ -1,11 +1,14 @@
 import React from "react";
-import { About } from "../components";
+import { About, SEO } from "../components";
 
 const AboutPage = () => {
   return (
-    <div>
-      <About />
-    </div>
+    <>
+      <SEO title="About Page" description="About AdvertIQ" type="About" />
+      <div>
+        <About />
+      </div>
+    </>
   );
 };
 

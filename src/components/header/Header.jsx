@@ -34,7 +34,9 @@ const Header = () => {
         {navlinks.map((item) => (
           <li key={item.id}>
             <NavLink
-              className={({ isActive }) => (isActive ? "text-orange" : "")}
+              className={({ isActive }) =>
+                `${isActive ? "text-orange" : ""} hover:text-orange`
+              }
               to={item.to}
               onClick={isMoblie ? closeMenu : null}
             >

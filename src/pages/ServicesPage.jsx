@@ -1,14 +1,12 @@
 import React from "react";
-import { Services } from "../components";
-import SEO from "../components/SEO";
+import { SEO, Services } from "../components";
 
 const ServicesPage = () => {
   return (
     <div>
       <SEO
         title="Advertiq Services Page"
-        description="Services"
-        name="Advertiq"
+        description="Services Page"
         type="branding"
       />
       <Services />

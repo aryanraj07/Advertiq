@@ -8,7 +8,6 @@ const ContactPage = () => {
       <SEO
         title="Advertiq Contact Page"
         description="Contact Page"
-        name="Advertiq"
         type="branding"
       />
       <Contact />

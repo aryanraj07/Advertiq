@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base{
+html{
+    @apply container m-10 
+
+}
+}
+@layer components{
+    .navbar{
+        @apply flex items-center justify-between relative
+    }
+    .navbar-links{
+        @apply flex flex-col md:flex-row gap-8 
+    }
+}

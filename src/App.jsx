@@ -11,7 +11,9 @@ function App() {
     <>
       <Header />
       <Outlet />
-      <Footer />
+      <div className="fixed bottom-2">
+        <Footer />
+      </div>
     </>
   );
 }

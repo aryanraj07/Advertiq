@@ -8,21 +8,27 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Contact from "./pages/Contact.jsx";
-import Services from "./pages/Services.jsx";
-import About from "./pages/About.jsx";
+
+import {
+  AboutPage,
+  ContactPage,
+  HomePage,
+  ServicesPage,
+} from "./pages/index.js";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="/about" element={<About />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/services" element={<ServicesPage />} />
+      <Route path="/contact" element={<ContactPage />} />
     </Route>
   )
 );
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  <HelmetProvider>
     <RouterProvider router={router} />
-  </StrictMode>
+  </HelmetProvider>
 );

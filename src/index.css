@@ -11,7 +11,14 @@ html{
     .navbar{
         @apply flex items-center justify-between relative
     }
+
     .navbar-links{
-        @apply flex flex-col md:flex-row gap-8 
+        @apply flex flex-col md:flex-row gap-8 font-semibold text-lg
+    }
+    .hero-container{
+        @apply p-10 flex flex-col items-center justify-center 
+    }
+    .hero-img-container{
+        @apply flex items-center justify-center
     }
 }

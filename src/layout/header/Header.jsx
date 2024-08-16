@@ -28,25 +28,6 @@ const Header = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
-  const Menu = ({ isMoblie }) => {
-    return (
-      <ul className="navbar-links">
-        {navlinks.map((item) => (
-          <li key={item.id}>
-            <NavLink
-              className={({ isActive }) =>
-                `${isActive ? "text-orange" : ""} hover:text-orange`
-              }
-              to={item.to}
-              onClick={isMoblie ? closeMenu : null}
-            >
-              {item.name}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    );
-  };
 
   return (
     <div className="navbar">
@@ -57,23 +38,50 @@ const Header = () => {
           alt="logo"
         />
       </div>
-      {/* Our desktop navbar goes here*/}
-
-      <div className="hidden md:block">
-        <Menu isMoblie={false} />
+      {/* Our desktop menu goes here */}
+      <div className="hidden md:flex justify-between items-center w-full ml-20">
+        <ul className="navbar-links-container ">
+          {navlinks.map((item) => (
+            <li key={item.id}>
+              <NavLink
+                className={({ isActive }) =>
+                  `${isActive ? "text-orange" : ""} hover:text-orange`
+                }
+                to={item.to}
+              >
+                {item.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+        <button className="btn">Contact</button>
       </div>
 
-      {/* Our mobile navbar goes here */}
-      <div className=" md:hidden">
+      {/* Our mobile menu sidebar goes here */}
+      <div className="md:hidden">
         <button onClick={() => setIsOpen((prev) => !prev)}>
           <span className="material-symbols-outlined text-orange">
             {isOpen ? "close" : "menu"}
           </span>
         </button>
-
         {isOpen && (
-          <div className="absolute top-16 right-10   z-10  bg-white p-4 shadow-lg md:hidden ">
-            <Menu isMoblie={true} />
+          <div className="absolute top-16 right-10">
+            <ul className="navbar-links-container">
+              {navlinks.map((item) => (
+                <li key={item.id}>
+                  <NavLink
+                    onClick={closeMenu}
+                    className={({ isActive }) =>
+                      `${isActive ? "text-orange" : ""} hover:text-orange`
+                    }
+                    to={item.to}
+                  >
+                    {item.name}
+                  </NavLink>
+                </li>
+              ))}
+              <button className="btn">Contact</button>
+            </ul>
           </div>
         )}
       </div>

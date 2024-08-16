@@ -8,13 +8,13 @@ import { Footer, Header } from "./layout";
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
       <Outlet />
-      <div className="fixed bottom-2">
+      <div className="">
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -3,22 +3,62 @@
 @tailwind utilities;
 @layer base{
 html{
-    @apply container m-10 
+    @apply container m-10 bg-black text-white
 
 }
+}
+@layer base{
+    .btn{
+        @apply bg-orange text-white rounded-2xl outline-none font-semibold px-4 py-2 hover:bg-darkOrange
+    }
+    .btn-md{
+@apply bg-orange text-white rounded-3xl outline-none font-semibold px-8 py-4  hover:bg-darkOrange
+    }
+.heading-lg{
+    @apply font-bold text
+}
+    
+    .heading-md{
+        @apply font-semibold text-2xl
+        
+    }
 }
 @layer components{
+    /* Navbar styling */
     .navbar{
-        @apply flex items-center justify-between relative
+        @apply flex items-center justify-between px-4 py-4 
     }
+  
 
-    .navbar-links{
-        @apply flex flex-col md:flex-row gap-8 font-semibold text-lg
+    .navbar-links-container{
+        @apply flex flex-col md:flex-row gap-8 font-semibold text-lg items-center justify-evenly
     }
+    
+
+    
+    /* Hero section styling */
     .hero-container{
-        @apply p-10 flex flex-col items-center justify-center 
+        @apply p-10 flex flex-col items-center justify-center gap-20
+    }
+    .hero-container-head{
+        @apply flex flex-col gap-10 items-center
     }
     .hero-img-container{
         @apply flex items-center justify-center
     }
+    /* Stats Section styling goes here */
+    .stats-section-container{
+        @apply container px-4 py-4
+    }
+    .stats-section-card-container{
+        @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-items-center
+    }
+
+    .stats-section-card{
+        @apply flex flex-col gap-10  p-4 justify-center items-center 
+    }
+    .information-container{
+@apply p-4 flex flex-col gap-4 mt-10 mx-auto items-center justify-center max-w-4xl
+    }
+    
 }

@@ -4,6 +4,7 @@ import Hero from "../components/home/Hero.jsx";
 import SEO from "../components/SEO.jsx";
 import StatsSection from "../components/home/StatsSection.jsx";
 import Introduction from "../components/home/Introduction.jsx";
+import FeaturedServices from "../components/home/FeaturedServices.jsx";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
       <Hero />
       <StatsSection />
       <Introduction />
+      <FeaturedServices />
     </div>
   );
 };

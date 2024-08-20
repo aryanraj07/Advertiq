@@ -24,14 +24,16 @@ const StatsSection = () => {
     },
   ];
   return (
-    <div className="stats-section-container">
-      <div className="stats-section-card-container">
+    <div className="main-container">
+      <div className="grid items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {/* Our stats section card goes here */}
         {stats.map((item) => (
-          <div key={item.id} className="stats-section-card">
+          <div key={item.id} className="flex flex-col items-center gap-10">
             <h1 className="font-bold text-5xl text-orange ">{item.data}</h1>
-            <p className="font-semibold text-xl">{item.title}</p>
-            <div className="border border-b-2 border-white w-2/3"></div>
+            <div className="flex flex-col gap-5">
+              <p className="font-semibold text-xl">{item.title}</p>
+              <div className="border border-b-2 border-orange w-2/3"></div>
+            </div>
           </div>
         ))}
       </div>

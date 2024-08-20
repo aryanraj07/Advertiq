@@ -2,11 +2,10 @@ import React from "react";
 
 const Introduction = () => {
   return (
-    <div className="information-container">
-      <h1 className="heading">
-        Welcome to
-        <span className="text-orange">AdvertIQ</span>- Where Real Estate Reigns
-        Supreme!
+    <div className="main-container">
+      <h1 className="heading-md text-center">
+        Welcome to <span className="text-orange">AdvertIQ</span>- Where Real
+        Estate Reigns Supreme!
       </h1>
       {/* Description goes here */}
       <div className=" flex justify-center items-center flex-col gap-5">
